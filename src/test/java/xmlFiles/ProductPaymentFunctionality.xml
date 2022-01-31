@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+
+    <test name="Product Payment Functionality">
+        <parameter name="browser" value="chrome"></parameter>
+        <parameter name="language" value="DE"></parameter>
+        <classes>
+            <class name="runners.ProductPaymentFunctionalityRunner"></class>
+        </classes>
+    </test>
+
+</suite>

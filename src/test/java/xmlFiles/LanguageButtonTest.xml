@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Language Button Test">
+
+    <test name="Language Button in German">
+        <parameter name="browser" value="chrome"></parameter>
+        <parameter name="language" value="DE"></parameter>
+        <classes>
+            <class name="runners.LanguageButtonFunctionality"></class>
+        </classes>
+    </test>
+
+    <test name="Language Button in Turkish">
+        <parameter name="browser" value="chrome"></parameter>
+        <parameter name="language" value="TR"></parameter>
+        <classes>
+            <class name="runners.LanguageButtonFunctionality"></class>
+        </classes>
+    </test>
+
+    <test name="Language Button in English">
+        <parameter name="browser" value="chrome"></parameter>
+        <parameter name="language" value="EN"></parameter>
+        <classes>
+            <class name="runners.LanguageButtonFunctionality"></class>
+        </classes>
+    </test>
+
+</suite>

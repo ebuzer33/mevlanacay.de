@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+
+
+    <test name="Product Functionality in English">
+        <parameter name="browser" value="chrome"></parameter>
+        <parameter name="language" value="EN"></parameter>
+        <classes>
+            <class name="runners.ProductFunctionality"></class>
+        </classes>
+    </test>
+
+    <test name="Product Functionality in Turkish">
+        <parameter name="browser" value="chrome"></parameter>
+        <parameter name="language" value="TR"></parameter>
+        <classes>
+            <class name="runners.ProductFunctionality"></class>
+        </classes>
+    </test>
+
+    <test name="Product Functionality in German">
+        <parameter name="browser" value="chrome"></parameter>
+        <parameter name="language" value="DE"></parameter>
+        <classes>
+            <class name="runners.ProductFunctionality"></class>
+        </classes>
+    </test>
+
+</suite>
