@@ -4,39 +4,39 @@ Feature:Blog Functionality
     When Click on the Blog button
     Then The user should be able to see the Blog Page
 
-  Scenario: TC_0401
+  Scenario: User should be able to click on a article
     And Click on one of the articles randomly
     Then The user should be able to see the article
 
-  Scenario: TC_0402
+  Scenario: User should be able to click the read more button
     And Click on one of the Read More buttons randomly
     Then The user should be able to see the article
 
-  Scenario:  TC_0403
+  Scenario:The user should be able to click the link button on the image
     And Hover over one of the images randomly
     And Click on the link button
     Then The user should be able to see the article
 
-  Scenario: TC_0404
+  Scenario:The user should be able to click the like button inside the article
     And Click on one of the articles randomly
     And Click on one of the Like buttons in the article page
     Then The number of likes should be changed
 
-  Scenario: TC_0405
+  Scenario: The user should be able to click the like button on the blog page
     And Click on one of the Like buttons randomly
     Then The number of like button that the user randomly clicks should change
 
-  Scenario:tc
+  Scenario:After clicking the like button on the blog page, the user should see that the number of likes on the article page has changed
     And Click on one of the Like buttons randomly
     And click on the randomly liked article
     Then The number of likes should be changed
 
-  Scenario: TC_0406
+  Scenario: The user should be able to click the zoom button on the image
     And Hover over one of the images randomly
     And Click on the Zoom button
-    Then The user should be able to see the same picture
+    Then The user should see the image zoomed in
 
-  Scenario Outline:TC_0407, TC_0408, TC_0409, TC_0410
+  Scenario Outline:The user should be able to share the article with the social media buttons
     And Click on one of the articles randomly
     And Click on the share on "<Social Media>" button
     Then The user should be able to share the article on the "<New Page>"
@@ -48,7 +48,7 @@ Feature:Blog Functionality
       | Pinterest    | pinterest |
       | Linkedin     | linkedin  |
 
-  Scenario Outline: TC_0411, TC_0412, TC_0413
+  Scenario Outline: The user should be able to search for a word he wrote in the search input on the article page
     And Click on one of the articles randomly
     And Send "<Search Word>" to the Search input
     Then The user should be able to see the "<MessageDE>" ,"<MessageTR>","<MessageEN>"of the relevant search result
@@ -58,6 +58,7 @@ Feature:Blog Functionality
       | hello       | Keine Ergebisse gefunden | Sonuç bulunamadı | No results found |
 
 
-  Scenario:TC_0414
+  Scenario:The user should be able to click the next page button on the blog page
     And Click on the Next Page button
     Then The user should be able to see the articles on the next page
+

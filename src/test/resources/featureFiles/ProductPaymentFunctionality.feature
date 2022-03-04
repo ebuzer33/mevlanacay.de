@@ -4,16 +4,16 @@ Feature: Product Payment Functionality
     Given Click on the Product button
     And Click on one of the products randomly which is in the stocks
 
-  Scenario: TC_0811
+  Scenario: The user should be able to pay with paypal without adding the product to the cart
     When Click on the PayPal button
     Then The user should be able to see PayPal login page
 
-  Scenario: TC_0812
+  Scenario: After adding the product to the cart, the user should be able to pay with paypal
     When Click on the Warenkorb button
     When Click on the PayPal button
     Then The user should be able to see PayPal login page
 
-  Scenario Outline: TC_0813 ... TC_0826
+  Scenario Outline: The user must be able to fill out the form on the payment page
     When Click on the Warenkorb button
     Then Click on the Weiter Zur Kasse button
     And Fill the Vorname "<Name>"
@@ -53,3 +53,4 @@ Feature: Product Payment Functionality
     And Fill the Gutschein Code field randomly "123ert"
     When Click on the Gutschein Anwenden button
     Then The user should be able to see Der Gutschein message
+

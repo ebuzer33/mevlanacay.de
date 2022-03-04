@@ -8,7 +8,9 @@ import utils.Drivers;
 
 @CucumberOptions(
         features = {"src/test/resources/featureFiles/LanguageButtonFunctionality.feature"},
-        glue = {"stepDefinitions", "utils"}
+        glue = {"stepDefinitions", "utils"},
+        monochrome = true,
+        publish = true
 )
 public class LanguageButtonFunctionality extends AbstractTestNGCucumberTests {
 
@@ -18,4 +20,5 @@ public class LanguageButtonFunctionality extends AbstractTestNGCucumberTests {
         Drivers.threadBrowserName.set(browser);
         Drivers.threadLanguage.set(language);
     }
+
 }

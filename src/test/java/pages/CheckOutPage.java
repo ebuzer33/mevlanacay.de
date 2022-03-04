@@ -7,6 +7,7 @@ import utils.Drivers;
 import utils.Parent;
 
 public class CheckOutPage extends Parent {
+
     public CheckOutPage() {
         PageFactory.initElements(Drivers.getDriver(), this);
     }
@@ -38,9 +39,6 @@ public class CheckOutPage extends Parent {
     @FindBy(id = "payment_method_paypal_plus")
     private WebElement creditCardRadio;
 
-    @FindBy(css = "[class= 'nameRow']")
-    private WebElement paymentMethods;
-
     @FindBy(id = "terms")
     private WebElement termsAndConditions;
 
@@ -62,41 +60,20 @@ public class CheckOutPage extends Parent {
     @FindBy(name = "apply_coupon")
     private WebElement applyCoupon;
 
-    @FindBy(css = "div#ppplus>iframe")
-    private WebElement iFrame;
-
     @FindBy(xpath = "//iframe[contains(@id,\"iframe\")]")
     private WebElement cardIframe;
 
-    public WebElement getCardIframe() {
-        return cardIframe;
-    }
-
-    public WebElement getiFrame() {
-        return iFrame;
-    }
-
-    @FindBy(css = "div[data-pm=\"PayPal\"]")
+    @FindBy(xpath = "//div[contains(@class,'paymentMethodRow row')] [1]")
     private WebElement payPalCard;
 
-    @FindBy(css = "div[data-pm=\"Credit_Card\"]")
-    private WebElement crediCard;
+    @FindBy(xpath = "//div[contains(@class,'paymentMethodRow row')][3]")
+    private WebElement creditCard;
 
-    @FindBy(css = "div[data-pm=\"Bank\"]")
+    @FindBy(xpath = "//div[contains(@class,'paymentMethodRow row')] [2]")
     private WebElement bankCard;
 
-    @FindBy(css = "div[class=\"paymentMethodRow row selected\"]")
-    private WebElement uyari;
-
-    @FindBy(css = "div[class=\"payment_box payment_method_paypal_plus\"]")
-    private WebElement uyari2;
-
-    public WebElement getUyari2() {
-        return uyari2;
-    }
-
-    public WebElement getUyari() {
-        return uyari;
+    public WebElement getCardIframe() {
+        return cardIframe;
     }
 
     public WebElement getBankCard() {
@@ -107,8 +84,8 @@ public class CheckOutPage extends Parent {
         return payPalCard;
     }
 
-    public WebElement getCrediCard() {
-        return crediCard;
+    public WebElement getCreditCard() {
+        return creditCard;
     }
 
     public WebElement getFirstName() {
@@ -145,10 +122,6 @@ public class CheckOutPage extends Parent {
 
     public WebElement getCreditCardRadio() {
         return creditCardRadio;
-    }
-
-    public WebElement getPaymentMethods() {
-        return paymentMethods;
     }
 
     public WebElement getTermsAndConditions() {

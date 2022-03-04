@@ -5,7 +5,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utils.Drivers;
 import utils.Parent;
-
 import java.util.List;
 
 public class BlogPage extends Parent {
@@ -13,17 +12,20 @@ public class BlogPage extends Parent {
         PageFactory.initElements(Drivers.getDriver(), this);
     }
 
-    @FindBy(xpath = "//a//i[@class='icon-search']")
+    @FindBy(css = "a.zoom")
     private List<WebElement> zoomBtn;
 
-    @FindBy(xpath = "//a//i[@class='icon-link']")
+    @FindBy(css = "a.link")
     private List<WebElement> productLinkBtn;
 
     @FindBy(xpath = "//div//a[@class='next_page']")
     private WebElement nextPage;
 
-    @FindBy(css = "div[class=\"mask\"]+img")
-    private List<WebElement> producImageList;
+    @FindBy(css = "div[class=\"mask\"]")
+    private List<WebElement> imageList;
+
+    @FindBy(css = "div[class=\"image_links double\"]")
+    private List<WebElement> doubleLink;
 
     @FindBy(css = "figure>[class=\"mfp-img\"]")
     private WebElement imageZoom;
@@ -64,6 +66,9 @@ public class BlogPage extends Parent {
     @FindBy(css = "div[class=\"snf-desc\"]>h4")
     private WebElement searchNoResult;
 
+    public List<WebElement> getDoubleLink() {
+        return doubleLink;
+    }
     public WebElement getEntryTitle() {
         return entryTitle;
     }
@@ -92,9 +97,7 @@ public class BlogPage extends Parent {
         return nextPage;
     }
 
-    public List<WebElement> getProducImageList() {
-        return producImageList;
-    }
+    public List<WebElement> getImageList() { return imageList;  }
 
     public WebElement getImageZoom() {
         return imageZoom;
@@ -132,4 +135,3 @@ public class BlogPage extends Parent {
         return likeBtn;
     }
 }
-

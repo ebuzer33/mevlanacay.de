@@ -7,12 +7,12 @@ import org.testng.annotations.Parameters;
 import utils.Drivers;
 
 @CucumberOptions(
-        features = {"src/test/resources/featureFiles/FooterMenuFunctionality.feature"},
+        features = {"src/test/resources/featureFiles"},
         glue = {"stepDefinitions", "utils"},
         monochrome = true,
         publish = true
 )
-public class FooterMenuFunctionalityRunner extends AbstractTestNGCucumberTests {
+public class RegressionRunner extends AbstractTestNGCucumberTests {
 
     @BeforeClass
     @Parameters({"browser", "language"})
@@ -20,5 +20,6 @@ public class FooterMenuFunctionalityRunner extends AbstractTestNGCucumberTests {
         Drivers.threadBrowserName.set(browser);
         Drivers.threadLanguage.set(language);
     }
-}
 
+
+}

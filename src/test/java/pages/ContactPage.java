@@ -7,6 +7,7 @@ import utils.Drivers;
 import utils.Parent;
 
 public class ContactPage extends Parent {
+
     public ContactPage() {
         PageFactory.initElements(Drivers.getDriver(),this);
     }

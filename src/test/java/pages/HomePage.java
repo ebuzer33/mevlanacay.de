@@ -5,12 +5,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utils.Drivers;
 import utils.Parent;
-
 import java.util.List;
 
 public class HomePage extends Parent {
+
     public HomePage() {
-        PageFactory.initElements(Drivers.getDriver(),this);
+        PageFactory.initElements(Drivers.getDriver(), this);
     }
 
     @FindBy(css = "button[data-cf-action=\"accept\"]")
@@ -31,7 +31,7 @@ public class HomePage extends Parent {
     @FindBy(css = "ul[id='menu-ana-menu']>:nth-child(1)")
     private WebElement homeBtn;
 
-    @FindBy(xpath = "(//ul[@id='menu-ana-menu']//li)[2]")
+    @FindBy(css = "ul[id='menu-ana-menu']>:nth-child(2)")
     private WebElement productBtn;
 
     @FindBy(css = "ul[id='menu-ana-menu']>:nth-child(3)")

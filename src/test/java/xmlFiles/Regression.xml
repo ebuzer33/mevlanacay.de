@@ -1,29 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="ContactUs">
+<suite name="Regression Suite">
 
-    <test name="ContactUs in German">
+    <test name="Regression in DE">
         <parameter name="browser" value="chrome"></parameter>
         <parameter name="language" value="DE"></parameter>
         <classes>
-            <class name="runners.ContactUsRunner"></class>
+            <class name="runners.RegressionRunner"></class>
         </classes>
     </test>
 
-    <test name="ContactUs in English">
-        <parameter name="browser" value="chrome"></parameter>
-        <parameter name="language" value="EN"></parameter>
-        <classes>
-            <class name="runners.ContactUsRunner"></class>
-        </classes>
-    </test>
-
-    <test name="ContactUs in Turkish">
+    <test name="Regression in TR">
         <parameter name="browser" value="chrome"></parameter>
         <parameter name="language" value="TR"></parameter>
         <classes>
-            <class name="runners.ContactUsRunner"></class>
+            <class name="runners.RegressionRunner"></class>
         </classes>
     </test>
 
+    <test name="Regression in EN">
+        <parameter name="browser" value="chrome"></parameter>
+        <parameter name="language" value="EN"></parameter>
+        <classes>
+            <class name="runners.RegressionRunner"></class>
+        </classes>
+    </test>
 </suite>

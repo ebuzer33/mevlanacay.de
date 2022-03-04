@@ -9,16 +9,15 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import pages.HomePage;
-
 import java.time.Duration;
 import java.util.List;
 import java.util.Set;
 
 public class Parent {
-    private WebDriverWait wait;
+    private final WebDriverWait wait;
     private static WebDriver driver;
-    private JavascriptExecutor js;
-    private Actions actions;
+    private final JavascriptExecutor js;
+    private final Actions actions;
 
     public Parent() {
         wait= new WebDriverWait(Drivers.getDriver(), Duration.ofSeconds(15));
@@ -63,6 +62,7 @@ public class Parent {
         hp.clickToElement(hp.getCookiesAccept());
 
     }
+
 
     public void sendKeys(WebElement element, String input) { // scrolls to element, clears the previous input and sends the new input
         scrollToElement(element);

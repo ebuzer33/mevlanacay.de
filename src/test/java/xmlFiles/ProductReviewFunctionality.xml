@@ -2,8 +2,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
 
-
-
     <test name="Product Review Functionality in Turkish">
         <parameter name="browser" value="chrome"></parameter>
         <parameter name="language" value="TR"></parameter>
@@ -11,16 +9,18 @@
             <class name="runners.ProductReviewFunctionalityRunner"></class>
         </classes>
     </test>
-    <test name="Product Review Functionality in German">
+
+    <test name="Product Review Functionality in English">
         <parameter name="browser" value="chrome"></parameter>
-        <parameter name="language" value="DE"></parameter>
+        <parameter name="language" value="EN"></parameter>
         <classes>
             <class name="runners.ProductReviewFunctionalityRunner"></class>
         </classes>
     </test>
-    <test name="Product Review Functionality in English">
+
+    <test name="Product Review Functionality in German">
         <parameter name="browser" value="chrome"></parameter>
-        <parameter name="language" value="EN"></parameter>
+        <parameter name="language" value="DE"></parameter>
         <classes>
             <class name="runners.ProductReviewFunctionalityRunner"></class>
         </classes>

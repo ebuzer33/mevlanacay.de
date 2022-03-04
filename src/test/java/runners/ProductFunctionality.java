@@ -8,7 +8,9 @@ import utils.Drivers;
 
 @CucumberOptions(
         features = {"src/test/resources/featureFiles/ProductFunctionality.feature"},
-        glue = {"stepDefinitions", "utils"}
+        glue = {"stepDefinitions", "utils"},
+        monochrome = true,
+        publish = true
 )
 public class ProductFunctionality extends AbstractTestNGCucumberTests {
 
@@ -18,5 +20,6 @@ public class ProductFunctionality extends AbstractTestNGCucumberTests {
         Drivers.threadBrowserName.set(browser);
         Drivers.threadLanguage.set(language);
     }
+
 }
 

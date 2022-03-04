@@ -1,6 +1,6 @@
-Feature:
+Feature:Filter Menu Functionality
 
-  Scenario:On the Germany page, products should be filtered according to the selected type
+  Scenario:The user should be able to filter the products according to the filtering options
     Given Hover over the Product Button
     Then Click to the Teezubehör Button
     And Click on the filter button
@@ -10,3 +10,4 @@ Feature:
     |date|
     |price|
     |price-desc|
+

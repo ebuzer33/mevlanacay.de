@@ -5,9 +5,12 @@ import io.cucumber.testng.CucumberOptions;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import utils.Drivers;
+
 @CucumberOptions(
         features = {"src/test/resources/featureFiles/MenuFunctionality.feature"},
-        glue = {"stepDefinitions", "utils"}
+        glue = {"stepDefinitions", "utils"},
+        monochrome = true,
+        publish = true
 )
 public class MenuFunctionalityRunner extends AbstractTestNGCucumberTests {
 
@@ -17,4 +20,5 @@ public class MenuFunctionalityRunner extends AbstractTestNGCucumberTests {
         Drivers.threadBrowserName.set(browser);
         Drivers.threadLanguage.set(language);
     }
+
 }

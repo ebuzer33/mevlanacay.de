@@ -1,8 +1,9 @@
 Feature: Footer Menu Functionality
 
-  Scenario:cv
+  Scenario:The user should be able to see that the links in the footer menu are clickable
     Given Hover over the buttons in the footer menu
-    Then  Footer menu links should work properly
+    And  Footer menu links should work properly
+
 
 
 

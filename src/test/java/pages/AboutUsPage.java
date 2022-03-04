@@ -5,11 +5,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utils.Drivers;
 import utils.Parent;
-
 import java.util.List;
 
 public class AboutUsPage extends Parent {
-
     public AboutUsPage() {
         PageFactory.initElements(Drivers.getDriver(),this);
     }

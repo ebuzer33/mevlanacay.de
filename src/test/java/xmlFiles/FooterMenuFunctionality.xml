@@ -10,17 +10,17 @@
         </classes>
     </test>
 
-    <test name="Footer Menu Functionality in English">
+    <test name="Footer Menu Functionality Turkish">
         <parameter name="browser" value="chrome"></parameter>
-        <parameter name="language" value="EN"></parameter>
+        <parameter name="language" value="TR"></parameter>
         <classes>
             <class name="runners.FooterMenuFunctionalityRunner"></class>
         </classes>
     </test>
 
-    <test name="Footer Menu Functionality Turkish">
+    <test name="Footer Menu Functionality in English">
         <parameter name="browser" value="chrome"></parameter>
-        <parameter name="language" value="TR"></parameter>
+        <parameter name="language" value="EN"></parameter>
         <classes>
             <class name="runners.FooterMenuFunctionalityRunner"></class>
         </classes>

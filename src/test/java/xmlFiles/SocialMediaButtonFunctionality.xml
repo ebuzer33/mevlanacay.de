@@ -10,20 +10,8 @@
         </classes>
     </test>
 
-    <test name="Social Media Button Functionality in English">
-        <parameter name="browser" value="chrome"></parameter>
-        <parameter name="language" value="EN"></parameter>
-        <classes>
-            <class name="runners.SocialMediaButtonFunctionalityRunner"></class>
-        </classes>
-    </test>
 
-    <test name="Social Media Button Functionality in Turkish">
-        <parameter name="browser" value="chrome"></parameter>
-        <parameter name="language" value="TR"></parameter>
-        <classes>
-            <class name="runners.SocialMediaButtonFunctionalityRunner"></class>
-        </classes>
-    </test>
+
+
 
 </suite>

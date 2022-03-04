@@ -5,10 +5,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utils.Drivers;
 import utils.Parent;
-
 import java.util.List;
 
 public class ProductPage extends Parent {
+
     public ProductPage() {
         PageFactory.initElements(Drivers.getDriver(),this);
     }
@@ -25,7 +25,7 @@ public class ProductPage extends Parent {
     @FindBy(className = "alert_wrapper")
     private WebElement updatedSuccessMessage;
 
-    @FindBy(id ="paypal-animation-content")
+    @FindBy(css ="div[id='paypal-animation-content']>div div")
     private WebElement payPall;
 
     @FindBy(css ="[href='#tab-description']")
@@ -42,6 +42,27 @@ public class ProductPage extends Parent {
 
     @FindBy(css ="div[id='tab-additional_information']>table")
     private WebElement zusatzlicheInformationen;
+
+    @FindBy(css= "li[class*=instock]")
+    private List<WebElement> productListInStcok;
+
+    @FindBy(css = "li[class*=instock] img")
+    private List<WebElement> imgListInStock;
+
+    @FindBy(css = "li[class*=outofstock]>div[class=\"desc\"] a")
+    private List<WebElement> productListOutOfStock;
+
+    @FindBy(xpath = "//p[@class=\"stock out-of-stock\"]")
+    private  WebElement outOfStockGetText;
+
+    @FindBy(css = "select[name=\"orderby\"]")
+    private WebElement filterMenu;
+
+    @FindBy(css = "div[class=\"shop-filters\"]>form")
+    private WebElement filterBtn;
+
+    @FindBy(css = "#menu-item-22796>ul.sub-menu>li:last-child")
+    private WebElement teezubehörBtn;
 
     @FindBy(css ="[href='#tab-reviews']")
     private WebElement productReviews;
@@ -61,16 +82,10 @@ public class ProductPage extends Parent {
     @FindBy(css = "iframe[class='zoid-component-frame zoid-visible']")
     private WebElement iFrame;
 
-    @FindBy(xpath = "//div[.='Weiter']")
-    private WebElement payPalButton;
-
-    public WebElement getPayPalButton() {
-        return payPalButton;
-    }
-
     public WebElement getiFrame() {
         return iFrame;
     }
+
     public WebElement getAddToCart() {
         return addToCart;
     }
@@ -131,34 +146,6 @@ public class ProductPage extends Parent {
         return productReviewsEmail;
     }
 
-    @FindBy(css= "li[class*=instock]")
-    private List<WebElement> productListInStcok;
-
-
-    @FindBy(css = "li[class*=instock] img")
-    private List<WebElement> imgListInStock;
-
-    @FindBy(css = "li[class*=outofstock]>div[class=\"desc\"] a")
-    private List<WebElement> productListOutOfStock;
-
-    @FindBy(xpath = "//p[@class=\"stock out-of-stock\"]")
-    private  WebElement outOfStockGetText;
-
-    @FindBy(css = "i[class=\"icon-basket\"]")
-    private List<WebElement> productCartList;
-
-    @FindBy(css = "a[class='link']")
-    private List<WebElement> productListLink;
-
-    @FindBy(css = "select[name=\"orderby\"]")
-    private WebElement filterMenu;
-
-    @FindBy(css = "div[class=\"shop-filters\"]>form")
-    private WebElement filterBtn;
-
-    @FindBy(css = "#menu-item-22796>ul.sub-menu>li:last-child")
-    private WebElement teezubehörBtn;
-
     public List<WebElement> getProductListInStcok() {
         return productListInStcok;
     }
@@ -169,14 +156,6 @@ public class ProductPage extends Parent {
 
     public WebElement getOutOfStockGetText() {
         return outOfStockGetText;
-    }
-
-    public List<WebElement> getProductCartList() {
-        return productCartList;
-    }
-
-    public List<WebElement> getProductListLink() {
-        return productListLink;
     }
 
     public WebElement getFilterMenu() {
